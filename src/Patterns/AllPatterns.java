@@ -9,7 +9,7 @@ public class AllPatterns {
 		Scanner sc = new Scanner(System.in);
 		int n =8;
 		int m = 9;
-		
+//		System.out.println("printing rectangle pattern");
 		rec(n,m);
 		System.out.println("---------------------");
 		hallowRec(n,m);
@@ -29,7 +29,10 @@ public class AllPatterns {
 		ZeroOneTrian(n,m);
 		System.out.println("---------------------");
 	}
+	
+	// printing rectangle pattern 
 		public static void rec(int n , int m ) {
+			
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<m; j++) {
 				System.out.print("* ");
@@ -38,6 +41,7 @@ public class AllPatterns {
 		}
 
 	} 
+		// printing hallow rectangle pattern
 		public static void hallowRec(int n , int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=m; j++) {
@@ -50,6 +54,7 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		// printing triangle  pattern
 		public static void triangle(int n , int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=i; j++) {
@@ -58,6 +63,7 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		// printing reverse triangle  pattern
 		public static void revTrian(int n , int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=m; j>i; j--) {
@@ -66,6 +72,7 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		// printing reverse traingle  pattern
 		public static void revTrian1(int n , int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=n-i; j++) {
@@ -77,6 +84,7 @@ public class AllPatterns {
 				System.out.println();
  			}
 		}
+		// printing traingle numbers pattern
 		public static void numbers(int n, int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=i; j++) {
@@ -85,6 +93,7 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		// printing reverse traingle numbers pattern
 		public static void revNum(int n) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=(n-i+1); j++) {
@@ -93,6 +102,8 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		
+		// printing traingle numbers pattern
 		public static void floyd(int n, int m) {
 			int count = 1;
 			for(int i=1; i<=n; i++) {
@@ -103,6 +114,7 @@ public class AllPatterns {
 				System.out.println();
 			}
 		}
+		// printing traingle  0 and 1 s pattern
 		public static void ZeroOneTrian(int n, int m) {
 			for(int i=1; i<=n; i++) {
 				 for(int j=1; j<=i; j++) {
