@@ -9,25 +9,34 @@ public class AllPatterns {
 		Scanner sc = new Scanner(System.in);
 		int n =8;
 		int m = 9;
-//		System.out.println("printing rectangle pattern");
+		System.out.println("----------rec-----------");
 		rec(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------hallowRec-----------");
 		hallowRec(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------triangle-----------");
 		triangle(n,m);
-		System.out.println("---------------------");
+		System.out.println("-----------revTrian----------");
 		revTrian(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------revTrian1-----------");
 		revTrian1(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------numbers-----------");
 		numbers(n,m);
-		System.out.println("---------------------");
+		System.out.println("-----------revNum----------");
 		revNum(n);
-		System.out.println("---------------------");
+		System.out.println("----------floyd-----------");
 		 floyd(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------ZeroOneTrian-----------");
 		ZeroOneTrian(n,m);
-		System.out.println("---------------------");
+		System.out.println("----------rightAngledTriangle-----------");
+		rightAngledTriangle(n);
+		System.out.println("----------PalindromeTriangle-----------");
+		PalindromeTriangle(n);
+		System.out.println("----------Diamond-----------");
+		Diamond(n);
+		System.out.println("----------Butterfly-----------");
+		Butterfly(n);
+		System.out.println("----------Rhombus-----------");
+		rhombus(n);
 	}
 	
 	// printing rectangle pattern 
@@ -88,7 +97,7 @@ public class AllPatterns {
 		public static void numbers(int n, int m) {
 			for(int i=1; i<=n; i++) {
 				for(int j=1; j<=i; j++) {
-					System.out.print(j);
+					System.out.print(j + " ");
 				}
 				System.out.println();
 			}
@@ -126,6 +135,118 @@ public class AllPatterns {
 					 }
 				 }
 				 System.out.println();
+			}
+		}
+//	  right-angled triangle with numbers in increasing row order, aligned to the right.
+		public static void  rightAngledTriangle(int n ) {
+		
+			for(int i=1; i<=n; i++) {
+				for(int j=1; j<=(n-i); j++) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<=i; j++) {
+					System.out.print(i + " ");
+					
+				}
+				System.out.println();
+			}
+		}
+//		 Palindrome Triangle Pattern
+		public static void PalindromeTriangle(int n) {
+			for(int i=1; i<=n; i++) {
+				
+//				for(int j=1; j<(n-i); j++) {
+//					System.out.print(" ");
+//				}
+				 for (int j = 1; j <= 2 * (n - i); j++) {
+		                System.out.print(" ");
+		            }
+
+				for(int j=i; j>=1; j--) {
+					System.out.print(j + " ");
+				}
+				for(int j=1+1; j<=i; j++) {
+					System.out.print(j + " ");
+				}
+//				for()
+				System.out.println();
+				
+			}
+		}
+// Diamond Star Pattern
+		public static void Diamond(int n) {
+			
+			for(int i=1; i<=n; i++) {
+				for(int j=1; j<=(n-i); j++) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<i; j++) {
+					System.out.print("*");
+				}
+				for(int j=2; j<i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+			for(int i=n; i>=1; i--) {
+				for(int j=(n-i); j>=1; j--) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<i; j++) {
+					System.out.print("*");
+				}
+				for(int j=2; j<i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+		
+		}
+		
+//		Butterfly Star Pattern
+		public static void Butterfly(int n) {
+			for(int i=1; i<=n; i++) {
+				for(int j=1; j<=i; j++) {
+					System.out.print("*");
+				}
+				for(int j=1; j<=(n-i)*2; j++) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<=i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+			for(int i=n; i>=1; i--) {
+				for(int j=1; j<=i; j++) {
+					System.out.print("*");
+				}
+				for(int j=1; j<=(n-i) *2 ; j++) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<=i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+		}
+		
+//		Rhombus Pattern
+		public static void rhombus(int n) {
+			for(int i=1; i<=n; i++) {
+				for(int j=1; j <n-i; j++) {
+					System.out.print(" ");
+				}
+				for(int j=1; j<=n; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+		}
+//		Hollow Triangle Pattern
+		public static void hollowTriangle(int n) {
+			for(int i=1; i<=n; i++) {
+				
 			}
 		}
 
