@@ -43,6 +43,14 @@ public class AllPatterns {
 		mirrorImageTriangle(n);
 		System.out.println("----------hollowDiamondPyramid-----------");
 		hollowDiamondPyramid(n);
+		System.out.println("----------charPattern-----------");
+		charPattern(n);
+		System.out.println("----------sameCharaterPattern-----------");
+		sameCharaterPattern(n);
+		System.out.println("----------rightAngleCharacter-----------");
+		rightAngleCharacter(n);
+		System.out.println("----------hallowDiamondPattern-----------");
+		hallowDiamondPattern(n);
 
 	}
 	
@@ -322,6 +330,65 @@ public class AllPatterns {
 	            System.out.println();
 	        
 		}
+		}
+//		 Character Pattern Printing
+		public static void charPattern(int n) {
+			for(int i=0; i<n; i++) {
+				for(char ch = 'A'; ch <='A' + i; ch++  ) {
+					System.out.print(ch + " ");
+				}
+				System.out.println();
+			}
+		}
+//       Same Character Printing 
+		public static void sameCharaterPattern(int n) {
+			
+			for(int i=0; i<n; i++) {
+				char ch = (char) ('A' + i);
+				for(int j=0; j<=i; j++) {
+					System.out.print(ch + " ");
+				}
+				System.out.println();
+			}
+		}
+//		right angle character patter
+		public static void rightAngleCharacter(int n) {
+			for(int i=0; i<n; i++) {
+				for(char ch =(char) ('H'-i); ch <= 'H'; ch++) {
+					System.out.print(ch + " ");
+				}
+				System.out.println();
+			}
+		}
+//      Hallow diamand Pattern  
+		public static void hallowDiamondPattern(int n) {
+			// upper body
+			for(int i=1; i<=n; i++) {
+				for(int j=i; j<=n; j++) {
+					System.out.print("*");
+				}
+				for(int j=1; j<2*i; j++) {
+					System.out.print(" ");
+				}
+				for(int j=i; j<=n; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+			// lower patterns
+			for(int i=n; i>=1; i--) {
+				for(int j=i; j<=n; j++) {
+					System.out.print("*");
+				}
+				for(int j=1; j<2*i; j++) {
+					System.out.print(" ");
+				}
+				for(int j=i; j<=n; j++) {
+					System.out.print("*" );
+				}
+				System.out.println();
+			}
+			
 		}
 
 }
