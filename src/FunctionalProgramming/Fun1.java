@@ -1,28 +1,41 @@
 package FunctionalProgramming;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class Fun1 {
 	public static void main(String[] args) {
-		List<String> list = List.of("DEEKSHITH","ANU","CHINTU","SWEETY","SAI");
-		list.stream().forEach(System.out::println);
-		System.out.println();
-		list.stream().filter(x ->x.equals("ANU")).map(x -> x.concat(" CHINTU")).forEach(System.out::println);
-		System.out.println("printALLSquareNUmber : ");
-		printALLSquareNUmber(List.of(12,43,65,76,89,4,22,54,67,89,43,11));
+		
+		
+		List<Integer> numbers = List.of(10,54,64,76,43,10, 54,93,26,73);
+		fun1(numbers);
+		
 		
 	}
+	
+	public static void fun1(List numbers) {
+//	      numbers.stream()
+//	      .filter(n -> n%2 == 0)
+//	      .map(n -> n *n)
+//	      .collect(Collectors.toList())
+//	      .forEach(System.out::println);
+		
+		numbers.stream()
+		.distinct()
+		.sorted()
+		.skip(2)
+		.limit(100)
+		.forEach(n -> System.out.println(n));
+		
+	
+		
+	 
+	}	
 
-	private static void printALLSquareNUmber(List<Integer> numbers) {
-		Predicate<? super Integer> predicate = x->x%2 == 0;
-		 numbers.stream()
-		 .filter(predicate)
-		 .map(x->x*x*2)
-		 .forEach(System.out::println);
-		
-	}
+
+
+	
+	
+	
 	
 	
 
