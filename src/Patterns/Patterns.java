@@ -13,14 +13,20 @@ public class Patterns {
 		RightAlignedStarTriangle(n);
 		InvertedCenteredPyramid(n);
 		PascalTriangle(n);
-		
+		InvertedHalfPyramid(n);
+		DiamondShape(n);
+		NumberPyramid(n);
+		PascalTriangleNumbers(n);
+		HollowDiamond(n);
+		HollowRightTriangle(n);
+		RightAlignedTriangle(n);
+		PyramidNumbers(n);
 		sc.close();
 	}
 
-
-
 	private static void RightAngledTriangle(int n) {
 		// TODO Auto-generated method stub
+		System.out.println("-------RightAngledTriangle-------");
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=i; j++) {
 				System.out.print(j + " ");
@@ -32,6 +38,7 @@ public class Patterns {
 
 	private static void RightAlignedStarTriangle(int n) {
 		// TODO Auto-generated method stub
+		System.out.println("-------RightAlignedStarTriangle-------");
 		for(int i=1; i<=n; i++) {
 			for(int k= 1; k<=n-i; k++) {
 				System.out.print(" ");
@@ -45,6 +52,7 @@ public class Patterns {
 //	 TODO pratice this onr again 
 	private static void InvertedCenteredPyramid(int n) {
 		// TODO Auto-generated method stub
+		System.out.println("-------InvertedCenteredPyramid-------");
 		for(int i=n; i<=1; i--) {
 				for(int j=1; j<=n-i; j++) {
 					System.out.print(" ");
@@ -60,6 +68,7 @@ public class Patterns {
 
 	private static void PascalTriangle(int n) {
 		// TODO Auto-generated method stub
+		System.out.println("-------PascalTriangle-------");
 		for(int i=0; i<n; i++) {
 			for(int space =0; space <= n-i-1; space++) {
 				System.out.print(" ");
@@ -74,7 +83,140 @@ public class Patterns {
 		}
 		
 	}
-	
+	private static void InvertedHalfPyramid(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("------InvertedHalfPyramid--------");
+		for(int i=n; i>=0; i--) {
+			for(int j=1; j<=i; j++) {
+				System.out.print(j + " ");
+				
+			}
+			System.out.println();
+		}
+	}
+	private static void DiamondShape(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------DiamondShape-------");
+	for(int i=1; i<=n; i++) {
+		for(int j=1; j<=n-i;j++) {
+			System.out.print(" ");
+		}
+		for(int j=1;j<=i; j++) {
+			System.out.print("*");
+		}
+		for(int j=1;j<=i; j++) {
+			if(i!=j)
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+	for(int i=n; i>=1; i--) {
+		for(int j=1; j<=n-i;j++) {
+			System.out.print(" ");
+		}
+		for(int j=1;j<=i; j++) {
+			System.out.print("*");
+		}
+		for(int j=1;j<=i; j++) {
+			System.out.print("*");
+		}
+		System.out.println();
+		
+	}
+	}
+
+	private static void NumberPyramid(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------Number Pyramid-------");
+		for(int i=1; i<=n; i++) {
+			for(int k=1; k<=n-i; k++) {
+				System.out.print(" ");
+			}
+			for(int j=1; j<i; j++) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+		
+	}
+
+	private static void PascalTriangleNumbers(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------PascalTriangleNumbers-------");
+		for(int i=0; i<n; i++) {
+			for(int j=1; j<=n-i-1; j++) {
+				System.out.print(" ");
+			}
+			int sum = 1;
+			for(int j=0; j<i; j++) {
+				System.out.print(sum + " ");
+				sum = sum *(i-j)/(j+1);
+			}
+			System.out.println();
+		}
+	}
+//	TODO :complete this pattern
+	private static void HollowDiamond(int n) {
+		// TODO Auto-generated method stub
+		for(int i=1; i<=n; i++) {
+//			for(int j=1; j<=i; j++) {
+//				System.out.print();
+//			}
+		}
+	}
+
+
+	private static void HollowRightTriangle(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------HollowRightTriangle-------");
+	  for(int i=1; i<=n; i++) {
+		  for(int j=1; j<=i; j++) {
+			  if(j==1 || i == 5 || i==j) {  
+				  System.out.print("*");
+			  } else {
+				  System.out.print(" ");
+			  }
+		  }
+		  System.out.println();
+	  }
+		
+	}
+
+
+	private static void RightAlignedTriangle(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------RightAlignedTriangle-------");
+		for(int i=0; i<=n; i++) {
+			for(int j=0;j<=n-i-1;j++) {
+				System.out.print(" ");
+			}
+			for(int j=0; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+
+	private static void PyramidNumbers(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------PyramidNumbers-------");
+         for(int i=1; i<=n; i++) {
+        	 for(int j=1; j<=n-i;j++) {
+        		 System.out.print(" ");
+        	 }
+        	 for(int j=1; j<=i;j++) {
+        		 System.out.print(j);
+        	 }
+        	 for(int j=i; j>=1; j--) {
+        		 if(i!=j)
+        		 System.out.print(j);
+        	 }
+        	 System.out.println();
+         }
+		
+	}
+
 
 }
 
