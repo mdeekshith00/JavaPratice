@@ -21,6 +21,8 @@ public class Patterns {
 		HollowRightTriangle(n);
 		RightAlignedTriangle(n);
 		PyramidNumbers(n);
+		RightAlignedTriangle2(n);
+		HalfInvertedPyramid(n);
 		sc.close();
 	}
 
@@ -215,6 +217,38 @@ public class Patterns {
         	 System.out.println();
          }
 		
+	}
+	
+	private static void RightAlignedTriangle2(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------RightAlignedTriangle2-------");
+	for(int i=1; i<=n; i++) {
+		for(int j=1; j<=n-i;j++) {
+			System.out.print(" ");
+		}
+		for(int j=1; j<=i; j++) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+	}
+
+	private static void HalfInvertedPyramid(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------HalfInvertedPyramid-------");
+		    for (int i = 0; i < n; i++) {
+		        // Print spaces
+		        for (int j = 0; j < i; j++) {
+		            System.out.print(" ");
+		        }
+		        // Print stars
+		        for (int j = 0; j < 2 * (n - i) - 1; j++) {
+		            System.out.print("*");
+		        }
+		        System.out.println();
+		    }
+		
+
 	}
 
 
