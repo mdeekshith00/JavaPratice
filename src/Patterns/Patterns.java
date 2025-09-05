@@ -26,6 +26,7 @@ public class Patterns {
 		sc.close();
 	}
 
+
 	private static void RightAngledTriangle(int n) {
 		// TODO Auto-generated method stub
 		System.out.println("-------RightAngledTriangle-------");
@@ -247,9 +248,8 @@ public class Patterns {
 		        }
 		        System.out.println();
 		    }
-		
-
 	}
+
 
 
 }
