@@ -24,10 +24,9 @@ public class Patterns {
 		RightAlignedTriangle2(n);
 		HalfInvertedPyramid(n);
 		NumberHourglassPattern(n);
+		HollowPyramidwithNumbers(n);
 		sc.close();
 	}
-
-
 
 	private static void RightAngledTriangle(int n) {
 		// TODO Auto-generated method stub
@@ -281,6 +280,21 @@ public class Patterns {
 			     System.out.println();
 		      }
 		
+	}
+
+	private static void HollowPyramidwithNumbers(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------HollowPyramidwithNumbers-------");
+		for(int i=1;i<n; i++) {
+			for(int j=i;j<=i;j++) {
+				if(i+j==n) {
+					System.out.print(1);
+				} else if(i==j) {
+					System.out.print(j);
+				}
+			}
+			System.out.println();
+		}
 	}
 
 
