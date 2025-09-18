@@ -8,6 +8,7 @@ public class Patterns {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Number n:");
 		int n = sc.nextInt();
+		int m = 9;
 		
 		RightAngledTriangle(n);
 		RightAlignedStarTriangle(n);
@@ -25,6 +26,9 @@ public class Patterns {
 		HalfInvertedPyramid(n);
 		NumberHourglassPattern(n);
 		HollowPyramidwithNumbers(n);
+		HollowSquarewithDiagonal(n);
+		ZigZagPattern(m);
+		NumberSpiralPattern(n);
 		sc.close();
 	}
 
@@ -296,6 +300,86 @@ public class Patterns {
 			System.out.println();
 		}
 	}
+
+	private static void HollowSquarewithDiagonal(int n) {
+		// TODO Auto-generated method stub
+		System.out.println("-------HollowSquarewithDiagonal-------");
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n; j++) {
+				if(i==1 || j==1 || i==n || j==n || i==j || i+j == n+1) 
+					System.out.print("*");
+				else 
+					System.out.print(" ");
+				
+			}
+			System.out.println();
+		}
+		
+	}
+	private static void ZigZagPattern(int m) {
+	    System.out.println("-------ZigZagPattern -------");
+	    for (int i = 1; i <=3; i++) {  // Only 3 rows
+	        for (int j = 1; j <= m; j++) {
+	            if ((i + j) % 4 == 0 || (i == 2 && j % 2 == 0)) {
+	                System.out.print("*");
+	            } else {
+	                System.out.print(" ");
+	            }
+	        }
+	        System.out.println();
+	    }
+	}
+
+	private static void NumberSpiralPattern(int n) {
+		// TODO Auto-generated method stub
+		  System.out.println("-------NumberSpiralPattern -------");
+		  int[][] arr = new int[n][n];
+
+	        int num = 1;
+	        int top = 0, bottom = n - 1;
+	        int left = 0, right = n - 1;
+
+	        while (num <= n * n) {
+	            // 1. Top row → left to right
+	            for (int j = left; j <= right; j++) {
+	                arr[top][j] = num++;
+	            }
+	            top++;
+
+	            // 2. Right column → top to bottom
+	            for (int i = top; i <= bottom; i++) {
+	                arr[i][right] = num++;
+	            }
+	            right--;
+
+	            // 3. Bottom row → right to left
+	            for (int j = right; j >= left; j--) {
+	                arr[bottom][j] = num++;
+	            }
+	            bottom--;
+
+	            // 4. Left column → bottom to top
+	            for (int i = bottom; i >= top; i--) {
+	                arr[i][left] = num++;
+	            }
+	            left++;
+	        }
+
+	        // print matrix
+	        for (int i = 0; i < n; i++) {
+	            for (int j = 0; j < n; j++) {
+	                System.out.printf("%3d", arr[i][j]);
+	            }
+	            System.out.println();
+	        }
+	   }
+//		1  2  3  4  5
+//		16          6
+//		15          7
+//		14          8
+//		13 12 11 10 9
+  
+		
 
 
 
