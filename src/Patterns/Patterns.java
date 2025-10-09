@@ -29,9 +29,11 @@ public class Patterns {
 		HollowSquarewithDiagonal(n);
 		ZigZagPattern(m);
 		NumberSpiralPattern(n);
+		MatrixZigZagNumbers(n);
+		HalfDiamondPattern(n);
+		HollowTriangle(n);
 		sc.close();
 	}
-
 	private static void RightAngledTriangle(int n) {
 		// TODO Auto-generated method stub
 		System.out.println("-------RightAngledTriangle-------");
@@ -378,11 +380,77 @@ public class Patterns {
 //		15          7
 //		14          8
 //		13 12 11 10 9
-  
+
+	private static void MatrixZigZagNumbers(int n) {
+		// TODO Auto-generated method stub
+		 System.out.println("-------MatrixZigZagNumbers -------");	
+		 int num = 1;
+		 for(int i=1; i<=n; i++) {
+			 if(i%2 != 0) {
+				 for(int j=1; j<=n; j++) {
+					 System.out.print(num++ + " ");
+				 }
+			 } else {
+				 int start = num + n-1;
+				 for(int j=1; j<=n; j++) {
+					 System.out.print(start-- + " ");
+					 num++;
+				 }
+			 }
+			 System.out.println();
+		 }
+	
+//		1  2  3  4
+//		8  7  6  5
+//		9 10 11 12
+//		16 15 14 13
+
+	}
 		
 
 
+	private static void HalfDiamondPattern(int n) {
+		 System.out.println("-------HalfDiamondPattern -------");	
+		// TODO Auto-generated method stub
+		for(int i=1; i<=n;i++) {
+			for(int j=1; j<=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();	
+	}
+		for(int i=n-1; i>=1;i--) {
+			for(int j=1; j<=i ; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	private static void HollowTriangle(int n) {
+		// TODO Auto-generated method stub
+		 System.out.println("-------HollowTriangle -------");	
+		 for(int i=1; i<=n; i++) {
+			 for(int j=i; j<n;j++) {
+				 System.out.print(" ");
+			 }
+            for(int j=1; j<=(2*i-1); j++) {
+            	if(j==1 || j==(2 *i-1) ||i== n) 
+            		System.out.print("*");
+            	else 
+            		System.out.print(" ");
+            }
+            System.out.println();
+           }
+	}
 
 }
+//*********
+//*     *
+// *   *
+//  * *
+//   *
+//  * *
+// *   *
+//*     *
+//*********
 
 
